@@ -8,28 +8,28 @@ namespace PlayerPosition6._2
         {
             Renderer render = new Renderer();
             Player player = new Player(5,7);
-            render.DrawPlayer(player.X, player.Y, '#');
+            render.DrawPlayer(player.PositionX, player.PositionY, '#');
         }
     }
 
     class Renderer
     {
-        public void DrawPlayer(int x, int y ,char ch)
+        public void DrawPlayer(int PositionX, int PositionY ,char ch)
         {
-            Console.SetCursorPosition(x, y);
+            Console.SetCursorPosition(PositionX, PositionY);
             Console.Write(ch);
         }
     }
 
     class Player
     {
-        public int X { get; private set; }
-        public int Y { get; private set; }
+        public int PositionX { get; private set; }
+        public int PositionY { get; private set; }
 
-        public Player(int x, int y)
+        public Player(int PositionX, int PositionY)
         {
-            X = x;
-            Y = y;
+            this.PositionX = PositionX;
+            this.PositionY = PositionY;
         }
      }
 }
