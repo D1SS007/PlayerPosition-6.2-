@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace PlayerPosition6._2
 {
@@ -7,14 +7,18 @@ namespace PlayerPosition6._2
         static void Main(string[] args)
         {
             Renderer render = new Renderer();
-            Player player = new Player(5,7);
+
+            int playerStartPositionX = 5;
+            int playerStartPositionY = 6;
+            
+            Player player = new Player(playerStartPositionX, playerStartPositionY);
             render.DrawPlayer(player.PositionX, player.PositionY, '#');
         }
     }
 
     class Renderer
     {
-        public void DrawPlayer(int PositionX, int PositionY ,char ch)
+        public void DrawPlayer(int PositionX, int PositionY, char ch)
         {
             Console.SetCursorPosition(PositionX, PositionY);
             Console.Write(ch);
